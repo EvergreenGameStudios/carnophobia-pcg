@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://oyloh1tmlopw"]
+
+[ext_resource type="Script" uid="uid://cfkb0t64e11u4" path="res://scene-entity/label_3d_2.gd" id="1_q56xl"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_vbals"]
+
+[node name="Player" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.181936)
+
+[node name="Label3D" type="Label3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28466, -0.422225, -1.13994)
+text = "CONDITION"
+font_size = 16
+
+[node name="Label3D2" type="Label3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20355, -0.788565, -1.13994)
+text = "SAMPLE-SAMPLE"
+font_size = 16
+script = ExtResource("1_q56xl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_vbals")

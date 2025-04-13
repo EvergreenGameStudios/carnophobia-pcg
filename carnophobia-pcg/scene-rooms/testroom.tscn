@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://dij5583s28mv2"]
+
+[ext_resource type="PackedScene" uid="uid://oyloh1tmlopw" path="res://scene-entity/player.tscn" id="1_68xi2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ssabb"]
+
+[node name="WorldBase" type="Node3D"]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.64911, 0, 0, 0, 0.0487525, 0, 0, 0, 4.75163, 0, 0, 0)
+mesh = SubResource("BoxMesh_ssabb")
+
+[node name="Ceiling" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.64911, 0, 0, 0, 0.0487525, 0, 0, 0, 4.75163, 0, 2.14883, 0)
+mesh = SubResource("BoxMesh_ssabb")
+
+[node name="Wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.64911, 0, 0, 0, -2.13104e-09, -4.75163, 0, 0.0487525, -2.077e-07, -0.0129075, -0.191945, 2.28644)
+mesh = SubResource("BoxMesh_ssabb")
+
+[node name="Wall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.64911, 0, 0, 0, -2.13104e-09, -4.75163, 0, 0.0487525, -2.077e-07, -0.00668097, -0.200138, -2.39515)
+mesh = SubResource("BoxMesh_ssabb")
+
+[node name="Wall3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.03219e-07, 0.0487525, -2.077e-07, 0, -2.13104e-09, -4.75163, -4.64911, -2.13104e-09, 9.07887e-15, 2.29621, -0.200138, -0.0529065)
+mesh = SubResource("BoxMesh_ssabb")
+
+[node name="Wall4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.03219e-07, 0.0487525, -2.077e-07, 0, -2.13104e-09, -4.75163, -4.64911, -2.13104e-09, 9.07887e-15, -2.264, -0.211559, -0.0594251)
+mesh = SubResource("BoxMesh_ssabb")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.634582, 0, -0.772855, 0, 1, 0, 0.772855, 0, 0.634582, -2.46076, 1.21718, 2.22294)
+spot_range = 8.06263
+
+[node name="Player" parent="." instance=ExtResource("1_68xi2")]
+transform = Transform3D(-0.69689, 0, -0.717178, 0, 1, 0, 0.717178, 0, -0.69689, -1.725, 1.21284, -1.8606)
